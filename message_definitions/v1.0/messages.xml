@@ -2258,6 +2258,24 @@
     <field name="V_Down" type="double"/>
   </message>
 
+  <message name="WALDO_MSG" id="24">
+    <field name="roll"       type="float" unit="rad" alt_unit="deg"/>
+    <field name="yaw"        type="float" unit="rad" alt_unit="deg"/>
+    <field name="pitch"      type="float" unit="rad" alt_unit="deg"/>
+    <field name="fix"        type="uint8"  unit="byte_mask"/>
+    <field name="utm_east"   type="int32"  unit="cm" alt_unit="m"/>
+    <field name="utm_north"  type="int32"  unit="cm" alt_unit="m"/>
+    <field name="utm_zone"   type="uint8"/>
+    <field name="speed"      type="uint16" unit="cm/s" alt_unit="m/s">norm of 2d ground speed in cm/s</field>
+    <field name="week"       type="uint16" unit="weeks"/>
+    <field name="itow"       type="uint32" unit="ms"/>
+    <field name="est_height" type="float" unit="m"/>
+  </message>
+
+  <message name="WALDO_DEBUG_MSG" id="71">
+    <field name="countupfast" type="float"/>
+  </message>
+
 </msg_class>
 
 
@@ -2946,6 +2964,23 @@
     <field name="speed"  type="float" unit="m/s"/>
     <field name="climb"  type="float"  unit="m/s"/>
     <field name="itow"   type="uint32" unit="ms"/>
+  </message>
+
+  <message name="SHAPE" id="38">
+    <field name="id"     type="string"/>
+    <field name="color"  type="string"/>
+    <field name="status" type="uint8" unit="bool"/>
+    <field name="shape"  type="uint8" values="CIRCLE|POLYGON"/>
+    <field name="lat1"   type="int32"  unit="1e7deg" alt_unit="deg" alt_unit_coef="0.0000001"/>
+    <field name="lon1"   type="int32"  unit="1e7deg" alt_unit="deg" alt_unit_coef="0.0000001"/>
+    <field name="lat2"   type="int32"  unit="1e7deg" alt_unit="deg" alt_unit_coef="0.0000001"/>
+    <field name="lon2"   type="int32"  unit="1e7deg" alt_unit="deg" alt_unit_coef="0.0000001"/>
+    <field name="lat3"   type="int32"  unit="1e7deg" alt_unit="deg" alt_unit_coef="0.0000001"/>
+    <field name="lon3"   type="int32"  unit="1e7deg" alt_unit="deg" alt_unit_coef="0.0000001"/>
+    <field name="lat4"   type="int32"  unit="1e7deg" alt_unit="deg" alt_unit_coef="0.0000001"/>
+    <field name="lon4"   type="int32"  unit="1e7deg" alt_unit="deg" alt_unit_coef="0.0000001"/>
+    <field name="radius" type="float" unit="m"/>
+    <field name="alt" 	 type="int32" unit="mm"/>
   </message>
 
   <message name="PLUMES" id="100">
